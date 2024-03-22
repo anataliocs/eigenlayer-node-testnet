@@ -5,10 +5,10 @@
 operator:
   # This is the standard Ethereum address format (ex: 0x6a8c0D554a694899041E52a91B4EC3Ff23d8aBD5) of your operator
   # which is the ecdsa key you created or imported using EigenLayer CLI
-  address: 0xD51316807e116A35B512aA7ab34f29DDEc5A2345
+  address: 0x1643f767A45cF048f649441E9d20b7Dc40031C51
   # This is the standard Ethereum address format (ex: 0x6a8c0D554a694899041E52a91B4EC3Ff23d8aBD5)
   # This is the address where your operator will receive earnings. This could be same as operator address
-  earnings_receiver_address: 0xD51316807e116A35B512aA7ab34f29DDEc5A2345
+  earnings_receiver_address: 0x1643f767A45cF048f649441E9d20b7Dc40031C51
   # This is the standard Ethereum address format (0x...)
   # This is the address which operator will use to approve delegation requests from stakers.
   # if set, this address must sign and approve new delegation from Stakers to this Operator
@@ -18,21 +18,20 @@ operator:
   # Please refer to this link for more details on this field https://github.com/Layr-Labs/eigenlayer-contracts/blob/92ccacc868785350973afc15e90a18dcd39fbc0b/src/contracts/interfaces/IDelegationManager.sol#L33:
   # Please keep this field to 0, and it can be updated later using EigenLayer CLI
   staker_opt_out_window_blocks: 0
-  metadata_url:
-
+  metadata_url: https://coffee-permanent-louse-265.mypinata.cloud/ipfs/QmbfnVd2wk8g9AcWfBibBSWASDrGZMTYap46PDPjBju2y9
 # EigenLayer Delegation manager contract address
 # This will be provided by EigenLayer team
-el_delegation_manager_address:
+el_delegation_manager_address: 0x1b7b8F6b258f95Cf9596EabB9aa18B62940Eb0a8
 
 # ETH RPC URL to the ethereum node you are using for on-chain operations
-eth_rpc_url: 
+eth_rpc_url:
 
 # Signer Type to use
 # Supported values: local_keystore
 signer_type: local_keystore
 
 # Full path to local ecdsa private key store file
-private_key_store_path: /root/.eigenlayer/operator_keys/testkey2.ecdsa.key.json
+private_key_store_path: /root/.eigenlayer/operator_keys/testkey1.ecdsa.key.json
 
 # Chain ID: 1 for mainnet, 5 for Goerli, 17000 for holesky, 31337 for local
 chain_id: 5

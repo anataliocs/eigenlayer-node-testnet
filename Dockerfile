@@ -24,11 +24,9 @@ RUN privateKey2=$(echo "password7" | eigenlayer operator keys create --insecure 
     && echo $privateKey2 \
     && echo "password" | eigenlayer operator keys import --insecure --key-type bls testkey3 "$privateKey2"
 
-COPY /config .
-
-RUN ls
+COPY --chmod=755 /config .
 
 EXPOSE 8002
 
 # Start the application using PM2
-CMD bash -c "eigenlayer operator register operator.yaml"
+CMD bash -c "echo password | eigenlayer operator register operator.yaml"
