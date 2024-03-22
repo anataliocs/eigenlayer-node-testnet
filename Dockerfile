@@ -1,5 +1,8 @@
 FROM golang:bookworm
 
+# Create app directory
+WORKDIR /usr/src/app
+
 RUN apt-get update && apt-get install -y curl less
 
 #
@@ -16,13 +19,14 @@ RUN privateKey=$(echo "password" | eigenlayer operator keys create --insecure --
     && echo $privateKey \
     && echo "password" | eigenlayer operator keys import --insecure --key-type ecdsa testkey1 "$privateKey"
 
-RUN privateKey2=$(echo "password" | eigenlayer operator keys create --insecure --key-type bls testkey2  \
-    | grep -wE '// +[0-9]{77}' | tr -d '[:space:]' | tr -d '\/'  )  \
+RUN privateKey2=$(echo "password7" | eigenlayer operator keys create --insecure --key-type bls testkey2  \
+    | grep -wE '// +[0-9]{70,80}' | tr -d '[:space:]' | tr -d '\/'  )  \
     && echo $privateKey2 \
     && echo "password" | eigenlayer operator keys import --insecure --key-type bls testkey3 "$privateKey2"
 
+COPY /config .
 
-RUN eigenlayer operator config create | echo "N"
+RUN ls
 
 EXPOSE 8002
 

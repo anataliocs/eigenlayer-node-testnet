@@ -18,5 +18,5 @@ docker push chrisaspheron/spheron-eigenlayer-test:latest
 
 
 ```
-docker build --platform linux/amd64 -t spheron-eigenlayer-test .
+docker build --progress=plain --no-cache -t spheron-eigenlayer-test .
 ```
