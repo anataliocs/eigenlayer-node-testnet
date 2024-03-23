@@ -20,3 +20,7 @@ docker push chrisaspheron/spheron-eigenlayer-test:latest
 ```
 docker build --progress=plain --no-cache -t spheron-eigenlayer-test .
 ```
+
+### Deployed Eigenlayer Contracts
+
+https://github.com/Layr-Labs/eigenlayer-contracts?tab=readme-ov-file#deployments

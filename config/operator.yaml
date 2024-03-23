@@ -21,7 +21,8 @@ operator:
   metadata_url: https://coffee-permanent-louse-265.mypinata.cloud/ipfs/QmbfnVd2wk8g9AcWfBibBSWASDrGZMTYap46PDPjBju2y9
 # EigenLayer Delegation manager contract address
 # This will be provided by EigenLayer team
-el_delegation_manager_address: 0x1b7b8F6b258f95Cf9596EabB9aa18B62940Eb0a8
+el_delegation_manager_address: 0xdfB5f6CE42aAA7830E94ECFCcAd411beF4d4D5b6
+el_slasher_address: 0xcAe751b75833ef09627549868A04E32679386e7C
 
 # ETH RPC URL to the ethereum node you are using for on-chain operations
 eth_rpc_url:  https://rpc.holesky.ethpandaops.io
